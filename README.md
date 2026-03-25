@@ -40,11 +40,11 @@ Expected Profit = (Revenue * Probability) - Cost
 
 Implemented as:
 (Sum_Revenue * 0.5) - (6.5 * 250)
-Expected Profit: $21,987  
-Threshold: $10,000  
+- Expected Profit: $21,987  
+- Threshold: $10,000  
 
 **Decision: Send the catalog**
-This analysis demonstrates how predictive modeling can directly inform marketing spend decisions and improve ROI by targeting high-value customers.
+- This analysis demonstrates how predictive modeling can directly inform marketing spend decisions and improve ROI by targeting high-value customers.
 
 ## Key Result Workflow
 <img width="896" height="417" alt="model_workflow" src="https://github.com/user-attachments/assets/243a3f18-e4e0-4b00-83e9-03311743a82a" />
