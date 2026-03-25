@@ -7,9 +7,9 @@ This project uses predictive analytics to determine whether a company should sen
 The goal is to estimate customer spending and calculate whether the campaign will exceed a $10,000 profit threshold.
 
 ## Business Problem
-Should the company send marketing catalogs to 250 customers?
-
-The decision depends on whether the expected profit from the campaign exceeds the cost.
+Should the company send catalogs to 250 customers given a $10,000 profit threshold?
+The decision depends on whether the expected profit from the campaign exceeds the cost and makes it worthwhile.
+Expected Profit = (Predicted Revenue × Probability of Purchase) − Cost
 
 ## Approach
 
@@ -41,6 +41,8 @@ Expected Profit = (Revenue * Probability) - Cost
 Implemented as:
 (Sum_Revenue * 0.5) - (6.5 * 250)
 Expected Profit: $21,987
+Decision: SEND catalog
+This approach allows marketing teams to allocate budget efficiently and avoid unprofitable campaigns.
 
 ## Key Result Workflow
 <img width="896" height="417" alt="model_workflow" src="https://github.com/user-attachments/assets/243a3f18-e4e0-4b00-83e9-03311743a82a" />
@@ -59,10 +61,39 @@ Send the catalogs, as expected profit exceeds the $10,000 threshold.
 - Regression modeling
 - Business decision analysis
 
-## Key Takeaways
-- Predictive models can guide marketing spend decisions
-- Even simple regression can produce high business value
-- Combining probability with revenue estimation improves decision quality
+## Business Impact
+
+This model demonstrates how predictive analytics can be used to:
+- optimize marketing spend
+- reduce unnecessary costs
+- increase campaign profitability
+
+## What I Would Improve
+
+This project was an early exercise in predictive analytics, and while the model performed well, I later revisited the statistical interpretation of key metrics.
+
+### P-Value
+The p-value measures the probability that the observed relationship between variables is due to random chance.
+
+- A p-value < 0.05 suggests the relationship is statistically significant
+- This means there is strong evidence that the predictor variable has a real impact on the target variable
+
+### R-Squared (R²)
+R² represents how much of the variation in the target variable is explained by the model.
+
+- In this project, R² ≈ 0.837
+- This indicates that ~83.7% of the variation in sales can be explained by the model
+
+### Reflection
+While I correctly used these metrics to justify the model, I have since developed a deeper understanding of:
+- statistical significance vs practical significance
+- model assumptions (linearity, independence, etc.)
+- limitations of relying solely on R²
+
+If I were to improve this project today, I would:
+- validate assumptions more rigorously
+- include additional evaluation metrics (MAE, RMSE)
+- test the model on unseen data (train/test split)
 
 ## Limitations
 - Linear model assumptions
