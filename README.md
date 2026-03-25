@@ -23,6 +23,8 @@ The decision depends on whether the expected profit from the campaign exceeds th
 - Verified statistical significance (p-value < 0.05)
 <img width="826" height="720" alt="scatterplot" src="https://github.com/user-attachments/assets/86ec674c-d12c-4558-bab5-db263d1ece18" />
 - This visualization shows a strong positive relationship between the number of products purchased and average sale amount, supporting the use of this variable in the regression model.
+
+
 ### 3. Model Performance
 - R² ≈ 0.837 → strong model fit
 <img width="867" height="500" alt="model_results" src="https://github.com/user-attachments/assets/d26124ed-233e-4f86-8ff5-618c4ec3578a" />
