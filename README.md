@@ -15,7 +15,7 @@ Expected Profit = (Predicted Revenue × Probability of Purchase) − Cost
 
 ### 1. Model Training
 - Used historical data from ~2300 customers
-- Built a regression model to predict average sales
+- A regression model was developed to estimate customer spending behavior
 
 ### 2. Feature Selection
 - Selected key predictor: Avg_Num_Products_Purchased
@@ -40,9 +40,11 @@ Expected Profit = (Revenue * Probability) - Cost
 
 Implemented as:
 (Sum_Revenue * 0.5) - (6.5 * 250)
-Expected Profit: $21,987
-Decision: SEND catalog
-This approach allows marketing teams to allocate budget efficiently and avoid unprofitable campaigns.
+Expected Profit: $21,987  
+Threshold: $10,000  
+
+**Decision: Send the catalog**
+This analysis demonstrates how predictive modeling can directly inform marketing spend decisions and improve ROI by targeting high-value customers.
 
 ## Key Result Workflow
 <img width="896" height="417" alt="model_workflow" src="https://github.com/user-attachments/assets/243a3f18-e4e0-4b00-83e9-03311743a82a" />
