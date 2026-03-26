@@ -103,7 +103,6 @@ The Random Forest model achieved the highest overall performance.
 ### ROC Curve Comparison
 <img width="834" height="526" alt="Creditworthiness_Roc_Curve" src="https://github.com/user-attachments/assets/38ac0540-99df-49bc-b9ee-8751bca0c748" />
 
----
 
 ## Key Drivers of Creditworthiness
 The most important variables across models:
@@ -114,7 +113,6 @@ The most important variables across models:
 - Duration of Credit  
 - Payment History  
 
----
 
 ## Model Bias & Insights
 The models showed a tendency to favor predicting customers as creditworthy.
@@ -125,7 +123,6 @@ This creates risk in real-world lending:
 
 Balancing this tradeoff is critical in financial systems.
 
----
 
 ## Final Model Selection
 The Random Forest model was selected because:
@@ -134,20 +131,25 @@ The Random Forest model was selected because:
 - Strong performance across both classes  
 - Best balance between creditworthy and non-creditworthy predictions  
 
----
 
 ## Results
 - 408 customers were classified as creditworthy  
 - The model provides a scalable approach to evaluating future loan applicants  
 
----
 
 ## Workflow
 
 <img width="782" height="435" alt="Workflow_Creditworthiness" src="https://github.com/user-attachments/assets/1bf7162f-7061-4f9b-876d-5ad4afca7232" />
 
+## Real-World Considerations
 
----
+In a production lending system, accuracy alone is not enough.
+
+Key tradeoffs include:
+- False Positives → approving risky customers (financial loss)
+- False Negatives → rejecting qualified applicants (lost revenue)
+
+This model highlights the importance of balancing both outcomes rather than optimizing for accuracy alone.
 
 ## Business Impact
 This model can help financial institutions:
@@ -157,7 +159,6 @@ This model can help financial institutions:
 - Automate credit evaluation workflows  
 - Support data-driven lending strategies  
 
----
 
 ## Tools Used
 - Alteryx (data preparation and modeling)  
