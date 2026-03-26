@@ -5,7 +5,6 @@ This project builds a classification system to determine whether a customer shou
 
 The goal is to simulate a real-world lending scenario where a bank must evaluate creditworthiness and minimize the risk of default while still approving qualified applicants.
 
----
 
 ## Business Problem
 Financial institutions must decide:
@@ -19,7 +18,6 @@ Incorrect decisions can lead to:
 
 This project uses historical customer data to build predictive models that support loan approval decisions.
 
----
 
 ## Dataset & Features
 The dataset includes customer financial and behavioral attributes such as:
@@ -38,7 +36,6 @@ Two datasets were used:
 - Training dataset (historical labeled data)  
 - Scoring dataset (new customers to evaluate)  
 
----
 
 ## Data Preparation
 - Removed low-value or low-variance fields (e.g., occupation, guarantors, dependents)  
@@ -47,7 +44,6 @@ Two datasets were used:
 
 These steps ensured that the models were trained on relevant and high-quality features.
 
----
 
 ## Modeling Approach
 Multiple classification models were built and compared:
@@ -59,7 +55,6 @@ Multiple classification models were built and compared:
 
 This approach allowed for evaluation of different modeling techniques and selection of the most effective one.
 
----
 
 ## Model Performance
 
@@ -72,7 +67,6 @@ This approach allowed for evaluation of different modeling techniques and select
 
 The Random Forest model achieved the highest overall performance and was selected as the final model.
 
----
 
 ## Key Drivers of Creditworthiness
 Across models, the most important variables included:
@@ -85,7 +79,6 @@ Across models, the most important variables included:
 
 These features had the strongest influence on whether a customer was classified as creditworthy.
 
----
 
 ## Model Evaluation & Bias
 Model evaluation included:
@@ -99,7 +92,6 @@ The models showed a tendency to favor predicting customers as creditworthy, resu
 
 In lending, balancing false positives (approving risky customers) vs false negatives (rejecting good customers) is critical.
 
----
 
 ## Final Model Selection
 The Random Forest model was selected because:
@@ -108,13 +100,11 @@ The Random Forest model was selected because:
 - Strong performance across both classes  
 - Better balance between predicting creditworthy and non-creditworthy customers  
 
----
 
 ## Results
 - 408 customers were classified as creditworthy  
 - The model provides a scalable approach to evaluating future loan applicants  
 
----
 
 ## Business Impact
 This model can help financial institutions:
@@ -124,13 +114,11 @@ This model can help financial institutions:
 - Automate credit evaluation workflows  
 - Support data-driven lending strategies  
 
----
 
 ## Tools Used
 - Alteryx (data preparation and modeling)  
 - Statistical modeling techniques (classification, feature importance, model comparison)  
 
----
 
 ## Project Screenshots
 _Add screenshots here:_
