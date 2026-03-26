@@ -5,6 +5,7 @@ This project builds a classification system to determine whether a customer shou
 
 The goal is to simulate a real-world lending scenario where a bank must evaluate creditworthiness and minimize the risk of default while still approving qualified applicants.
 
+---
 
 ## Business Problem
 Financial institutions must decide:
@@ -18,6 +19,7 @@ Incorrect decisions can lead to:
 
 This project uses historical customer data to build predictive models that support loan approval decisions.
 
+---
 
 ## Dataset & Features
 The dataset includes customer financial and behavioral attributes such as:
@@ -36,14 +38,14 @@ Two datasets were used:
 - Training dataset (historical labeled data)  
 - Scoring dataset (new customers to evaluate)  
 
+---
 
 ## Data Preparation
 - Removed low-value or low-variance fields (e.g., occupation, guarantors, dependents)  
 - Handled missing values by imputing age  
 - Cleaned and standardized input variables  
 
-These steps ensured that the models were trained on relevant and high-quality features.
-
+---
 
 ## Modeling Approach
 Multiple classification models were built and compared:
@@ -53,8 +55,7 @@ Multiple classification models were built and compared:
 - Boosted Model  
 - Random Forest  
 
-This approach allowed for evaluation of different modeling techniques and selection of the most effective one.
-
+---
 
 ## Model Performance
 
@@ -65,11 +66,47 @@ This approach allowed for evaluation of different modeling techniques and select
 | Boosted Model       | 78%      |
 | Random Forest       | **80%**  |
 
-The Random Forest model achieved the highest overall performance and was selected as the final model.
+The Random Forest model achieved the highest overall performance.
 
+---
+
+## Model Comparison
+
+<img width="845" height="637" alt="Model_Comparison_report_Creditworthiness" src="https://github.com/user-attachments/assets/bc741ff5-34d6-4e31-827c-3391538807eb" />
+
+
+---
+
+## Feature Importance
+
+### Random Forest
+<img width="792" height="595" alt="Forest_Tree_Creditworthiness" src="https://github.com/user-attachments/assets/1873f4bc-7cee-4c81-8b62-420ed9d4f7e2" />
+
+### Decision Tree
+<img width="845" height="404" alt="Decision_Tree_Creditworthiness" src="https://github.com/user-attachments/assets/0f085401-4c9e-4b02-8f94-42eefa3ca423" />
+
+### Boosted Model
+<img width="822" height="651" alt="Boosted_Model_Creditowthiness" src="https://github.com/user-attachments/assets/039f126b-8d13-4bc7-84a8-05442f3960d0" />
+
+
+## Logistic Regression Summary
+<img width="820" height="392" alt="Screenshot 2026-03-26 at 11 10 18 AM" src="https://github.com/user-attachments/assets/4f2e1c29-9984-465c-a05a-bca3ed334e4b" />
+
+
+
+## Model Evaluation
+
+### Confusion Matrix (Random Forest)
+
+<img width="842" height="141" alt="Bias_Creditworthiness" src="https://github.com/user-attachments/assets/729085a3-6d69-4121-9cfc-edcd42c1d9dd" />
+
+### ROC Curve Comparison
+<img width="834" height="526" alt="Creditworthiness_Roc_Curve" src="https://github.com/user-attachments/assets/38ac0540-99df-49bc-b9ee-8751bca0c748" />
+
+---
 
 ## Key Drivers of Creditworthiness
-Across models, the most important variables included:
+The most important variables across models:
 
 - Credit Amount  
 - Account Balance  
@@ -77,34 +114,40 @@ Across models, the most important variables included:
 - Duration of Credit  
 - Payment History  
 
-These features had the strongest influence on whether a customer was classified as creditworthy.
+---
 
+## Model Bias & Insights
+The models showed a tendency to favor predicting customers as creditworthy.
 
-## Model Evaluation & Bias
-Model evaluation included:
+This creates risk in real-world lending:
+- False positives → approving risky customers  
+- False negatives → rejecting good customers  
 
-- Confusion matrices  
-- Segment-level accuracy (creditworthy vs non-creditworthy)  
-- ROC curve comparison  
+Balancing this tradeoff is critical in financial systems.
 
-### Key Insight
-The models showed a tendency to favor predicting customers as creditworthy, resulting in higher accuracy for approved applicants than rejected ones.
-
-In lending, balancing false positives (approving risky customers) vs false negatives (rejecting good customers) is critical.
-
+---
 
 ## Final Model Selection
 The Random Forest model was selected because:
 
 - Highest overall accuracy (~80%)  
 - Strong performance across both classes  
-- Better balance between predicting creditworthy and non-creditworthy customers  
+- Best balance between creditworthy and non-creditworthy predictions  
 
+---
 
 ## Results
 - 408 customers were classified as creditworthy  
 - The model provides a scalable approach to evaluating future loan applicants  
 
+---
+
+## Workflow
+
+<img width="782" height="435" alt="Workflow_Creditworthiness" src="https://github.com/user-attachments/assets/1bf7162f-7061-4f9b-876d-5ad4afca7232" />
+
+
+---
 
 ## Business Impact
 This model can help financial institutions:
@@ -114,17 +157,16 @@ This model can help financial institutions:
 - Automate credit evaluation workflows  
 - Support data-driven lending strategies  
 
+---
 
 ## Tools Used
 - Alteryx (data preparation and modeling)  
-- Statistical modeling techniques (classification, feature importance, model comparison)  
+- Statistical modeling techniques  
 
+---
 
-## Project Screenshots
-_Add screenshots here:_
-
-- Model comparison report  
-- ROC curve  
-- Confusion matrix  
-- Workflow diagram  
-
+## Future Improvements
+- Rebuild model in Python (scikit-learn)  
+- Hyperparameter tuning  
+- Address class imbalance and bias  
+- Deploy as an API for real-time scoring  
