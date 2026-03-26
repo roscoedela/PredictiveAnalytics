@@ -96,7 +96,7 @@ Given the small dataset (11 cities), only one outlier was removed to preserve da
 
 See the original project submission here:
 
-[project_submission.pdf](project_submission.pdf)
+[Pawdacity Data Cleaning](Pawdacity_Data_Cleaning.pdf)
 
 ---
 
